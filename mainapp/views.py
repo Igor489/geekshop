@@ -96,7 +96,6 @@ def main(request):
 #     return random.sample(list(products), 1)[0]
 
 
-
 # def get_same_products(hot_product):
 #     same_products = Product.objects.filter(category=hot_product.category, is_active=True).exclude(pk=hot_product.pk)[:3]
 #     return same_products
@@ -161,7 +160,9 @@ def product(request, pk):
     }
     return render(request, "mainapp/product.html", content)
 
+
 from django.views.decorators.cache import cache_page
+
 
 @cache_page(600)
 def contact(request):
