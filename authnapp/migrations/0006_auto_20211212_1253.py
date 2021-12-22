@@ -9,13 +9,16 @@ from django.utils.timezone import utc
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('authnapp', '0005_create_profiles'),
+        ("authnapp", "0005_create_profiles"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='shopuser',
-            name='activation_key_expires',
-            field=models.DateTimeField(default=datetime.datetime(2021, 12, 14, 12, 53, 45, 891857, tzinfo=utc), verbose_name='актуальность ключа'),
+            model_name="shopuser",
+            name="activation_key_expires",
+            field=models.DateTimeField(
+                default=datetime.datetime(2021, 12, 14, 12, 53, 45, 891857, tzinfo=utc),
+                verbose_name="актуальность ключа",
+            ),
         ),
     ]
