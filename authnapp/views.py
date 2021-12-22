@@ -5,7 +5,8 @@ from django.db import transaction
 from django.shortcuts import HttpResponseRedirect, render
 from django.urls import reverse
 
-from authnapp.forms import ShopUserEditForm, ShopUserLoginForm, ShopUserProfileEditForm, ShopUserRegisterForm
+from authnapp.forms import (ShopUserEditForm, ShopUserLoginForm,
+                            ShopUserProfileEditForm, ShopUserRegisterForm)
 from authnapp.models import ShopUser
 
 
@@ -53,7 +54,6 @@ def register(request):
 
     content = {"title": title, "register_form": register_form}
     return render(request, "authnapp/register.html", content)
-
 
 from django.contrib.auth.decorators import login_required
 
