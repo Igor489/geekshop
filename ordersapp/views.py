@@ -143,7 +143,7 @@ def product_quantity_update_save(instance, sender, **kwargs):
 def product_quantity_update_delete(instance, **kwargs):
     instance.product.quantity = F("quantity") + instance.quantity
     instance.product.save()
-    
+
 
 from django.http import JsonResponse
 
